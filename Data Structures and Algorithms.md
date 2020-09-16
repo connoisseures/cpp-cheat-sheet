@@ -266,6 +266,9 @@ l.reverse();
 | Access by Key       |     `O(log(n))` |
 | Remove by Key       |     `O(log(n))` |
 | Find/Remove Value   |     `O(log(n))` |
+| iterate all         |     `O(n)`      |
+
+- https://stackoverflow.com/questions/11779859/whats-the-time-complexity-of-iterating-through-a-stdset-stdmap
 
 **`std::unordered_map`**
 
@@ -277,7 +280,8 @@ l.reverse();
 | Find/Remove Value   |              -- |
 
 **find max/min key**
-https://stackoverflow.com/questions/1660195/c-how-to-find-the-biggest-key-in-a-stdmap
+- https://stackoverflow.com/questions/1660195/c-how-to-find-the-biggest-key-in-a-stdmap
+
 
 **Example Code**
 ```c++
@@ -303,10 +307,11 @@ std::string value = m.at("key");
 // Size
 unsigned int size = m.size();
 
-// Iterate
+// Iterate //O(N)
 for(std::map<std::string, std::string>::iterator it = m.begin(); it != m.end(); it++) {
     std::cout << *it << std::endl;
 }
+// https://stackoverflow.com/questions/11779859/whats-the-time-complexity-of-iterating-through-a-stdset-stdmap
 
   // showing contents:
   std::cout << "mymap contains:\n";
