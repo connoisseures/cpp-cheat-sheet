@@ -276,9 +276,19 @@ l.reverse();
 | Remove by Key       |          `O(1)` |
 | Find/Remove Value   |              -- |
 
+**find max/min key**
+https://stackoverflow.com/questions/1660195/c-how-to-find-the-biggest-key-in-a-stdmap
+
 **Example Code**
 ```c++
+#include <map>
 std::map<std::string, std::string> m;
+
+//---------------------------------
+// Find max/min key 
+//---------------------------------
+min_key = m.begin()->first
+max_key = m.rbegin()->first
 
 //---------------------------------
 // General Operations
@@ -297,6 +307,12 @@ unsigned int size = m.size();
 for(std::map<std::string, std::string>::iterator it = m.begin(); it != m.end(); it++) {
     std::cout << *it << std::endl;
 }
+
+  // showing contents:
+  std::cout << "mymap contains:\n";
+  for (it=mymap.begin(); it!=mymap.end(); ++it)
+    std::cout << it->first << " => " << it->second << '\n';
+    //it->first : key; it->second : value
 
 // Remove by key
 m.erase("key");
@@ -334,6 +350,9 @@ unsigned int count = m.count("key");
 | Insert       |     `O(log(n))` |
 | Remove       |     `O(log(n))` |
 | Find         |     `O(log(n))` |
+| begin/end    |     `O(1)`      |
+
+- https://www.geeksforgeeks.org/setbegin-setend-c-stl/
 
 **Example Code**
 ```c++
