@@ -267,8 +267,12 @@ l.reverse();
 | Remove by Key       |     `O(log(n))` |
 | Find/Remove Value   |     `O(log(n))` |
 | iterate all         |     `O(n)`      |
+| find max/min key    |     `O(1)`      |
+| begin/rbegin/end    |     `O(1)`      |
 
+- https://www.geeksforgeeks.org/setbegin-setend-c-stl/
 - https://stackoverflow.com/questions/11779859/whats-the-time-complexity-of-iterating-through-a-stdset-stdmap
+- https://stackoverflow.com/questions/1660195/c-how-to-find-the-biggest-key-in-a-stdmap
 
 **`std::unordered_map`**
 
@@ -278,9 +282,6 @@ l.reverse();
 | Access by Key       |          `O(1)` |
 | Remove by Key       |          `O(1)` |
 | Find/Remove Value   |              -- |
-
-**find max/min key**
-- https://stackoverflow.com/questions/1660195/c-how-to-find-the-biggest-key-in-a-stdmap
 
 
 **Example Code**
